@@ -8,7 +8,7 @@ const productSchema = mongoose.Schema({
   // This schema will allow us to save comments per unique sneaker _id.
   // Duplicate items get their own comment section.
   // A server request made renders this data.
-  sneaks_id: { type: String, required: true, unique },
+  sneaks_id: { type: String, required: true, unique: true },
   product_comment: {
     type: [commentSchema],
   },
@@ -18,7 +18,7 @@ const productSchema = mongoose.Schema({
 const commentSchema = mongoose.Schema(
   {
     user: {
-      _id: { type: String, required: true, unique },
+      _id: { type: String, required: true, unique: true },
       username: { type: String, required: true },
       required: true,
     },
