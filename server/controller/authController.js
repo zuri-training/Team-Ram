@@ -2,7 +2,7 @@ const Users = require("../models/User");
 // bcrypt is a library for securely storing passwords using hashing and salting
 const bcrypt = require("bcrypt");
 
-// in both functions req.body expects are user object to validate
+// in both functions req.body expects a user object to validate
 // user login
 exports.login = async (req, res) => {
   try {
