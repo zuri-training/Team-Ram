@@ -60,7 +60,7 @@ header {
   display: flex;
   justify-content: space-between;
 }
-.btn-new-arrival {
+.btn-trending {
   border: none;
   background: none;
   font-family: Open Sans;
@@ -79,6 +79,11 @@ header {
 }
 
 /* card section */
+
+.card-img-top {
+  max-width: 250px;
+  max-height: 180px;
+}
 
 .rating,
 .rating-review {
@@ -152,11 +157,11 @@ header {
 
 /* Contact Us */
 
-.btn-contact-us{
+.btn-contact-us {
   background: var(--pry-orange);
   border: 1px solid var(--pry-orange);
 }
-.btn-contact-us:hover{
+.btn-contact-us:hover {
   background: var(--sec-orange);
   border: var(--sec-orange);
 }
@@ -177,7 +182,7 @@ footer-h3 {
   font-weight: 700;
   line-height: 33px;
 }
-.footer-link{
+.footer-link {
   text-decoration: none;
   color: var(--Neutral-white);
 }
