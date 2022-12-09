@@ -5,9 +5,512 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Price Compare</title>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="landingPage.css" />
   </head>
   <body>
+    <!-- Navbar styled with bootstrap -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container navbar-container">
+          <a class="navbar-brand navbar-logo" href="#"
+            ><img
+              src="./assets/price_compare-logo.png"
+              alt="Price compare logo"
+          /></a>
+          <div class="NavBar"></div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Product</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about us">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact us">Contact Us</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li> -->
+            </ul>
+
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="#" class="nav-link"><div class="login">Login</div></a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link nav-link-sign-up"
+                  ><div class="signUp">Sign Up</div></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="my-5">
+      <div class="container">
+        <!-- styling the first section -->
+
+        <div class="row">
+          <div class="col-md-5">
+            <h1 class="mt-5" style="font-size: 64px">
+              Search Affordable Comfort footwears
+            </h1>
+            <p class="mt-4" style="font-size: 24px">
+              Compare your favorite shoe brand prices and Pay less.
+            </p>
+            <!-- <button type="button" class="btn btn-primary mt-3">
+              Call to action!
+            </button> -->
+            <form class="d-flex">
+              <input
+                class="form-control me-2 input-search"
+                type="search"
+                placeholder="What shoe are you looking for?"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success btnn-search" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+          <div class="col-md-7">
+            <img
+              src="./assets/Hero Image.svg"
+              alt="price compare avatar"
+              style="width: 600px; height: 600px"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+
+        <!-- styling second section -->
+
+        <div class="btn-section-2">
+          <button class="btn-new-arrival">New Arrival</button>
+          <button class="btn-view-all">View all</button>
+        </div>
+
+        <!-- card section -->
+
+        <div class="row my-5">
+          <div class="col">
+            <div class="carousel">
+              <div class="carousel-inner">
+                <div class="card">
+                  <img
+                    src="./Images/nike-black.PNG"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Nike Air Max 90 LTR for Men</h5>
+                    <p class="card-text">
+                      <label for="" class="rating">4.5</label>
+                      <span class="icon-star">
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/half start icon.svg"
+                          alt="half star icon"
+                          class="icon-half-star"
+                        />
+                      </span>
+                      <span class="rating-review">(76)</span>
+                    </p>
+
+                    <div class="buy-now-section">
+                      <div class="price">$60.00</div>
+                      <a href="#"
+                        ><button
+                          type="button"
+                          class="btn btn-primary btn-buy-now"
+                        >
+                          Buy Now
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="https://picsum.photos/id/200/320/200"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Nike Air Max 90 LTR for Men</h5>
+                    <p class="card-text">
+                      <label for="" class="rating">4.5</label>
+                      <span class="icon-star">
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/half start icon.svg"
+                          alt="half star icon"
+                          class="icon-half-star"
+                        />
+                      </span>
+                      <span class="rating-review">(76)</span>
+                    </p>
+
+                    <div class="buy-now-section">
+                      <div class="price">$60.00</div>
+                      <a href="#"
+                        ><button
+                          type="button"
+                          class="btn btn-primary btn-buy-now"
+                        >
+                          Buy Now
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="https://picsum.photos/id/200/320/200"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Nike Air Max 90 LTR for Men</h5>
+                    <p class="card-text">
+                      <label for="" class="rating">4.5</label>
+                      <span class="icon-star">
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/half start icon.svg"
+                          alt="half star icon"
+                          class="icon-half-star"
+                        />
+                      </span>
+                      <span class="rating-review">(76)</span>
+                    </p>
+
+                    <div class="buy-now-section">
+                      <div class="price">$60.00</div>
+                      <a href="#"
+                        ><button
+                          type="button"
+                          class="btn btn-primary btn-buy-now"
+                        >
+                          Buy Now
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="https://picsum.photos/id/200/320/200"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Nike Air Max 90 LTR for Men</h5>
+                    <p class="card-text">
+                      <label for="" class="rating">4.5</label>
+                      <span class="icon-star">
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/half start icon.svg"
+                          alt="half star icon"
+                          class="icon-half-star"
+                        />
+                      </span>
+                      <span class="rating-review">(76)</span>
+                    </p>
+
+                    <div class="buy-now-section">
+                      <div class="price">$60.00</div>
+                      <a href="#"
+                        ><button
+                          type="button"
+                          class="btn btn-primary btn-buy-now"
+                        >
+                          Buy Now
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+        </div>
+
+        <!-- About Me Section -->
+
+        <div class="row">
+          <div class="col-md-5">
+            <h1 class="mt-5 about-us-h" style="font-size: 32px" id="about us"
+            >About Us</h1>
+            <p class="mt-5 about-us-p" style="font-size: 24px">
+              We provide High quality products without spending too much to look
+              good whilst allowing you to compare prices from the retailers and
+              get affordable product.....
+              <span><button class="btn-about-us">Read more</button></span>
+            </p>
+          </div>
+          <div class="col-md-7">
+            <img
+              src="./assets/About Us img 2.svg"
+              alt="price compare avatar"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+
+        <!-- Our Service Section -->
+
+        <div class="row">
+          <div class="col-md-7">
+            <img
+              src="./assets/Our Service img 2.svg"
+              alt="price compare avatar"
+              class="img-fluid"
+              style="height: 400px"
+            />
+          </div>
+          <div class="col-md-5">
+            <h1 class="mt-5 our-service-h" style="font-size: 32px">
+              Our Services
+            </h1>
+            <p class="mt-5 our-service-p" style="font-size: 28px">
+              We are committed to making our prospective user get affordable
+              products and also look good without spending too much. We provide
+              seamless experience.....
+              <span><button class="btn-about-us">Read more</button></span>
+            </p>
+            
+          </div>
+        </div>
+
+      <!-- Contact Us -->
+
+        <div class="text-center">
+          <h2 id="contact us">Contact Us</h2>
+          <p class="lead">Questions? Do not hesitate to contact us.</p>
+        </div>
+        <div class="row justify-content-center my-5">
+          <div class="col-lg-6">
+            <form action="">
+              <label for="email" class="form-label">Email:</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="my@email.com"
+                class="form-control"
+              />
+              <div class="form-floating my-5">
+                <input
+                  type="name"
+                  id="name"
+                  placeholder="e.g. Dawid"
+                  class="form-control"
+                />
+                <label for="name" class="form-label">Name:</label>
+              </div>
+              <label for="subject" class="form=label">Subject</label>
+              <select name="subject" id="subject" class="form-select">
+                <option value="pricing">Pricing</option>
+                <option value="technical" selected>Technical question</option>
+                <option value="other">Other</option>
+              </select>
+
+              <div class="form-floating my-5">
+                <textarea
+                  name="query"
+                  id="query"
+                  style="height: 150px"
+                  class="form-control"
+                  placeholder="Write a message"
+                ></textarea>
+
+                <label for="query">Write a message</label>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-contact-us">Send!</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+
+    <footer class="footer mt-auto py-3">
+      <div class="container footer-container">
+        <div class="row footer-row">
+          <div
+            class="col col-lg-5 col-sm-4 footer-col d-flex flex-column justify-content-center"
+          >
+            <img src="./assets/price_compare icon.png" alt="" class="mx-auto" />
+            <div class="mx-auto gx-5">
+              <a href="#" class="align-self-center footer-icon"
+                ><img src="./assets/facebook icon.svg" alt=""
+              /></a>
+              <a href="#" class="align-self-center footer-icon"
+                ><img src="./assets/twitter icon.svg" alt=""
+              /></a>
+              <a href="#" class="align-self-center footer-icon"
+                ><img src="./assets/instagram icon.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="col">
+            <h3 class="footer-h3">Find Product</h3>
+            <p><a href="#" class="footer-link">Women Shoes</a></p>
+            <p><a href="#" class="footer-link">Men Shoes</a></p>
+            <p><a href="#" class="footer-link">Children Shoes</a></p>
+            <p><a href="#" class="footer-link">Sport Shoes</a></p>
+            
+          </div>
+          <div class="col">
+            <h3 class="footer-h3">Get Help</h3>
+            <p><a href="#" class="footer-link">About Us</a></p>
+            <p><a href="#" class="footer-link">Contact Us</a></p>
+            <p><a href="#" class="footer-link">Return Policy</a></p>
+            <p><a href="#" class="footer-link">Privacy Policy</a></p>
+            <p><a href="#" class="footer-link">Payment Policy</a></p>
+            
+          </div>
+          <div class="col">
+            <h3 class="footer-h3">About Us</h3>
+            <p><a href="#" class="footer-link">Customer Care</a></p>
+            <p><a href="#" class="footer-link">News</a></p>
+            <p><a href="#" class="footer-link">Service</a></p>
+            <p><a href="#" class="footer-link">FAQs</a></p>
+            
+          </div>
+          
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
     <script src="./scripts/script.js" type="module"></script>
   </body>
 </html>

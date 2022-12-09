@@ -6,6 +6,8 @@ yellow: #FFB703
 
 orange: #FB8500 
 
+Hover-Yellow: #d17000
+
 ## neutral
 
 gray: #14121A
