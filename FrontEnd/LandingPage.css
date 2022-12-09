@@ -1,0 +1,183 @@
+* {
+  --pry-light-blue: #219ebc;
+  --pry-yellow: #ffb703;
+  --pry-orange: #fb8500;
+  --sec-orange: #d17000;
+  --Neutral-gray: #14121a;
+  --Neutral-navy-blue: #023047;
+  --Neutral-white: #ffffff;
+  --Neutral-blue: #219ebc;
+  /* Font-Size */
+  --Main-font-size: 26px;
+  /* format template */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* styling the nav bar */
+
+header {
+  border-bottom: 1px solid var(--pry-yellow);
+}
+
+.login {
+  color: var(--pry-orange);
+}
+.nav-link-sign-up {
+  color: var(--pry-orange) !important;
+  border: 1px solid var(--pry-yellow);
+  padding-inline: 40px;
+  border-radius: 5px;
+}
+
+/*  styling first section  */
+
+.input-search {
+  border: 1px solid var(--pry-orange);
+}
+.btnn-search {
+  border: 1px solid var(--pry-orange);
+  font-size: 25px;
+  color: white;
+  background: var(--pry-orange);
+  border-radius: 10px;
+}
+.input-search::placeholder {
+  color: #ccc;
+}
+.input-search {
+  border-radius: 10px;
+}
+.btn-outline-success:hover {
+  background: var(--sec-orange);
+  border: 1px solid var(--sec-orange);
+}
+
+/* styling second section */
+
+.btn-section-2 {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-new-arrival {
+  border: none;
+  background: none;
+  font-family: Open Sans;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0em;
+}
+.btn-view-all {
+  border: none;
+  background: none;
+  font-family: Open Sans;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+
+/* card section */
+
+.rating,
+.rating-review {
+  color: var(--pry-light-blue);
+}
+.buy-now-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price {
+  font-family: Open Sans;
+  font-size: 24px;
+  font-weight: 700;
+}
+.btn-buy-now {
+  background: var(--pry-orange);
+  border: var(--pry-orange);
+}
+.btn-buy-now:hover {
+  background: var(--sec-orange);
+}
+.carousel {
+  width: 100%;
+  overflow-x: scroll;
+}
+.carousel-inner {
+  gap: 10px;
+  display: flex;
+  width: 1100px;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* about us section */
+
+.about-us-h {
+  color: var(--Neutral-navy-blue);
+}
+.about-us-p {
+  font-family: Calisto MT;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 46px;
+}
+.btn-about-us {
+  border: none;
+  background: inherit;
+  color: var(--Neutral-blue);
+  font-family: inherit;
+  font-weight: 600;
+}
+
+/* Ourservice section */
+
+.our-service-h {
+  font-family: Open Sans;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--Neutral-navy-blue);
+}
+.our-service-p {
+  font-family: Calisto MT;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 46px;
+  letter-spacing: 0em;
+  text-align: justified;
+}
+
+/* Contact Us */
+
+.btn-contact-us{
+  background: var(--pry-orange);
+  border: 1px solid var(--pry-orange);
+}
+.btn-contact-us:hover{
+  background: var(--sec-orange);
+  border: var(--sec-orange);
+}
+
+/* Footer */
+
+.footer-icon {
+  padding: 0.5rem;
+}
+.footer-container {
+  padding: 1.5em;
+  background: var(--Neutral-blue);
+  color: var(--Neutral-white);
+}
+footer-h3 {
+  font-family: Open Sans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 33px;
+}
+.footer-link{
+  text-decoration: none;
+  color: var(--Neutral-white);
+}
