@@ -21,10 +21,8 @@ async function loadPopularProducts() {
     link.href = `/product?id=${popularProducts[i].styleID}`
   }
 }
+loadPopularProducts();
 
-window.onload = () => {
-  loadPopularProducts();
-}
 
 // const landingPageSearchBtn = document.querySelector("#");
 
