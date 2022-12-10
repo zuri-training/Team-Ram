@@ -4,14 +4,18 @@ const app = express();
 const PORT = process.env.PORT || 6969;
 const dbConnect = require("./config/database");
 const authRouter = require("./routes/authRouter");
+const productRouter = require("./routes/productRouter")
+const cors = require("cors");
 
 const MONGO_URI = process.env.MONGO_URI;
 
 dbConnect(MONGO_URI);
 
-app.use(express.json());
+app.use(cors(), express.json());
 
 app.use('/auth', authRouter)
+
+app.use('/products', productRouter)
 
 app.use('/', (req, res) => {
   res.send('req received');
