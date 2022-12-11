@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 1px solid greenyellow; */
 }
 
 /* styling the nav bar */
@@ -59,6 +60,7 @@ header {
 .btn-section-2 {
   display: flex;
   justify-content: space-between;
+  margin-inline: 1rem;
 }
 .btn-trending {
   border: none;
@@ -106,6 +108,9 @@ header {
 .btn-buy-now:hover {
   background: var(--sec-orange);
 }
+
+.popular-products {
+}
 .carousel {
   width: 100%;
   overflow-x: scroll;
@@ -113,7 +118,9 @@ header {
 .carousel-inner {
   gap: 10px;
   display: flex;
-  width: 1100px;
+  width: 900px;
+  margin-inline: auto;
+  justify-content: flex-end;
 }
 .carousel::-webkit-scrollbar {
   display: none;
@@ -176,13 +183,46 @@ header {
   background: var(--Neutral-blue);
   color: var(--Neutral-white);
 }
-footer-h3 {
-  font-family: Open Sans;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 33px;
-}
+
 .footer-link {
   text-decoration: none;
   color: var(--Neutral-white);
+  font-size: clamp(13px, 30%, 15px);
+}
+
+/* fix overflowing */
+
+.first-section-svg-container,
+.about-us-svg-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#Price-compare-logo {
+  width: 27%;
+}
+
+.Price-compare-logo {
+  width: 100%;
+}
+
+/* break point */
+
+@media (min-width: 768px) {
+  .carousel-inner {
+    width: 100%;
+  }
+}
+@media (min-width: 430px) {
+  .first-section-h1 {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 990px) {
+  #signup {
+    border: none;
+  }
+  display: none;
 }
