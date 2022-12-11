@@ -1,7 +1,3 @@
-## Deployed Website
-
-https://team-ram-price-compare.netlify.app/
-
 
 
 ## Price_Compare
@@ -23,3 +19,8 @@ A platform that compares prices across multiple platforms
     * Comment under product/price
     * Ability to share on social media and send by email
     * Link to the purchase page
+    
+    
+ ## Deployed Website
+
+   https://team-ram-price-compare.netlify.app/
