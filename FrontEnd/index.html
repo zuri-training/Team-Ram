@@ -18,10 +18,11 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container navbar-container">
-          <a class="navbar-brand navbar-logo" href="#"
+          <a class="navbar-brand navbar-logo" id="Price-compare-logo"
             ><img
               src="./assets/price_compare-logo.png"
               alt="Price compare logo"
+              class="Price-compare-logo"
           /></a>
           <div class="NavBar">
             <button
@@ -49,26 +50,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#contact us">Contact Us</a>
               </li>
-              <!-- <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li> -->
+        
             </ul>
 
             <ul class="navbar-nav mb-2 mb-lg-0">
@@ -76,8 +58,8 @@
                 <a href="#" class="nav-link"><div class="login">Login</div></a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link nav-link-sign-up"
-                  ><div class="signUp">Sign Up</div></a
+                <a href="#" class="nav-link nav-link-sign-up" id="signup"
+                  ><div class="signUp" >Sign Up</div></a
                 >
               </li>
             </ul>
@@ -87,11 +69,12 @@
     </header>
     <main class="my-5">
       <div class="container">
+
         <!-- styling the first section -->
 
         <div class="row">
-          <div class="col-md-5">
-            <h1 class="mt-5" style="font-size: 64px">
+          <div class="col-md-6">
+            <h1 class="mt-5 first-section-h1">
               Search Affordable Comfort footwears
             </h1>
             <p class="mt-4" style="font-size: 24px">
@@ -116,12 +99,12 @@
               </button>
             </form>
           </div>
-          <div class="col-md-7">
+          <div class="col-md-6 first-section-svg-container">
             <img
               src="./assets/Hero Image.svg"
               alt="price compare avatar"
               style="width: 600px; height: 600px"
-              class="img-fluid"
+              class="img-fluid hero-avatar-svg"
             />
           </div>
         </div>
@@ -351,6 +334,60 @@
                     </div>
                   </div>
                 </div>
+                <div class="card popular-products">
+                  <img
+                  src="./Images/nike-black.PNG"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Nike Air Max 90 LTR for Men</h5>
+                    <p class="card-text">
+                      <label for="" class="rating">4.5</label>
+                      <span class="icon-star">
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/full star icon.svg"
+                          alt="full star icon"
+                          class="icon-full-star"
+                        />
+                        <img
+                          src="./assets/half start icon.svg"
+                          alt="half star icon"
+                          class="icon-half-star"
+                        />
+                      </span>
+                      <span class="rating-review">(76)</span>
+                    </p>
+
+                    <div class="buy-now-section">
+                      <div class="price">$60.00</div>
+                      <a href="#"
+                        ><button
+                          type="button"
+                          class="btn btn-primary btn-buy-now"
+                        >
+                          Buy Now
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                
               </div>
               <!--  -->
             </div>
@@ -360,21 +397,20 @@
         <!-- About Me Section -->
 
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-6">
             <h1 class="mt-5 about-us-h" style="font-size: 32px" id="about us"
             >About Us</h1>
             <p class="mt-5 about-us-p" style="font-size: 24px">
               We provide High quality products without spending too much to look
               good whilst allowing you to compare prices from the retailers and
-              get affordable product.....
-              <span><button class="btn-about-us">Read more</button></span>
+              get affordable product.
             </p>
           </div>
-          <div class="col-md-7">
+          <div class="col-md-6 about-us-svg-container">
             <img
               src="./assets/About Us img 2.svg"
               alt="price compare avatar"
-              class="img-fluid"
+              class="img-fluid trying"
             />
           </div>
         </div>
@@ -397,8 +433,7 @@
             <p class="mt-5 our-service-p" style="font-size: 28px">
               We are committed to making our prospective user get affordable
               products and also look good without spending too much. We provide
-              seamless experience.....
-              <span><button class="btn-about-us">Read more</button></span>
+              seamless experience.
             </p>
             
           </div>
@@ -459,11 +494,13 @@
 
     <!-- footer -->
 
-    <footer class="footer mt-auto py-3" >
-      <div class="container footer-container">
+
+    <footer class="footer mt-auto py-3 footer-container">
+      <div class="container">
+
         <div class="row footer-row">
           <div
-            class="col col-lg-5 col-sm-4 footer-col d-flex flex-column justify-content-center"
+            class="col footer-col d-flex flex-column justify-content-center"
           >
             <img src="./assets/price_compare icon.png" alt="" class="mx-auto" />
             <div class="mx-auto gx-5">
@@ -478,16 +515,22 @@
               /></a>
             </div>
           </div>
-          <div class="col">
-            <h3 class="footer-h3">Find Product</h3>
+          <div class="row">
+
+            <div class="copyright-container col d-flex justify-content-center ">
+              <p class="copyright justify-content-center d-flex text-center mt-4"> Copyright &copy; ZURI Team_Ram Prize_Compare website</p>
+            </div>
+          </div>
+          <!-- <div class="col">
+            <h3 class="footer-h3" id="footer-h3">Find Product</h3>
             <p><a href="#" class="footer-link">Women Shoes</a></p>
             <p><a href="#" class="footer-link">Men Shoes</a></p>
             <p><a href="#" class="footer-link">Children Shoes</a></p>
             <p><a href="#" class="footer-link">Sport Shoes</a></p>
             
-          </div>
-          <div class="col">
-            <h3 class="footer-h3">Get Help</h3>
+          </div> -->
+          <!-- <div class="col">
+            <h3 class="footer-h3" id="footer-h3">Get Help</h3>
             <p><a href="#" class="footer-link">About Us</a></p>
             <p><a href="#" class="footer-link">Contact Us</a></p>
             <p><a href="#" class="footer-link">Return Policy</a></p>
@@ -496,13 +539,13 @@
             
           </div>
           <div class="col">
-            <h3 class="footer-h3">About Us</h3>
+            <h3 class="footer-h3" id="footer-h3">About Us</h3>
             <p><a href="#" class="footer-link">Customer Care</a></p>
             <p><a href="#" class="footer-link">News</a></p>
             <p><a href="#" class="footer-link">Service</a></p>
             <p><a href="#" class="footer-link">FAQs</a></p>
             
-          </div>
+          </div> -->
           
       </div>
     </footer>
