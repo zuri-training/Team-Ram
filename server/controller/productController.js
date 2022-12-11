@@ -6,7 +6,7 @@ const Products = require("../models/Product");
 // get popular shoes
 exports.getPopular = async (req, res) => {
   try {
-    sneaks.getMostPopular(4, (err, products) => {
+    sneaks.getMostPopular(8, (err, products) => {
       if (err) throw err;
       res.status(200).send({
         success: true,
@@ -30,7 +30,8 @@ exports.getProducts = async (req, res) => {
   try {
     // a req query containing a search query
     const { q } = await req.query;
-    sneaks.getProducts(q, 10, (err, products) => {
+    const query = decodeURI(q);
+    sneaks.getProducts(query, 14, (err, products) => {
       if (err) throw err;
       res.status(200).send({
         success: true,

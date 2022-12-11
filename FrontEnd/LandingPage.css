@@ -109,8 +109,6 @@ header {
   background: var(--sec-orange);
 }
 
-.popular-products {
-}
 .carousel {
   width: 100%;
   overflow-x: scroll;
@@ -223,6 +221,6 @@ header {
 @media (max-width: 990px) {
   #signup {
     border: none;
+    display: none;
   }
-  display: none;
 }
