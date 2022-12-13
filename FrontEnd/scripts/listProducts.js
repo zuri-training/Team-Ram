@@ -46,7 +46,7 @@ window.onload = async () => {
     let shoeName = trimName(product.shoeName);
     name.textContent = shoeName;
     const [price, link] = end.children;
-    price.textContent = `$${product.retailPrice}`;
+    price.textContent = product.retailPrice ? `$${product.retailPrice}` : "";
     link.href = `/pages/productDetails.html?id=${product.styleID}`
   }
 }
