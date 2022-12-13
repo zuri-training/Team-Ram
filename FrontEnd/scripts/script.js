@@ -43,3 +43,19 @@ landingPageSearchBtn.onclick = () => {
 
   location.href = `${location.pathname}pages/list.html?q=${reqQuery}`;
 };
+
+
+// incase the backend has spun down due to being on the free tier
+
+async function SpinUpBackend() {
+  await fetch(API_URL, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json"
+    },
+    // avoid cors errors
+    mode: "cors",
+  })
+}
+
+SpinUpBackend();
