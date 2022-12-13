@@ -65,7 +65,7 @@ header {
 .btn-trending {
   border: none;
   background: none;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-size: 28px;
   font-weight: 700;
   line-height: 38px;
@@ -74,7 +74,7 @@ header {
 .btn-view-all {
   border: none;
   background: none;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-size: 19px;
   font-weight: 400;
   letter-spacing: 0em;
@@ -97,7 +97,7 @@ header {
   align-items: center;
 }
 .price {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-size: 24px;
   font-weight: 700;
 }
@@ -130,7 +130,7 @@ header {
   color: var(--Neutral-navy-blue);
 }
 .about-us-p {
-  font-family: Calisto MT;
+  font-family: "Calisto MT";
   font-size: 28px;
   font-weight: 400;
   line-height: 46px;
@@ -146,13 +146,13 @@ header {
 /* Ourservice section */
 
 .our-service-h {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-size: 32px;
   font-weight: 600;
   color: var(--Neutral-navy-blue);
 }
 .our-service-p {
-  font-family: Calisto MT;
+  font-family: "Calisto MT";
   font-size: 28px;
   font-weight: 400;
   line-height: 46px;
