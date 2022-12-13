@@ -15,25 +15,25 @@
 <body>
   <div class="container-fluid">
     <div class="row-cols-lg-3" style="width: 100%">
-      <form>
+      <form id="login-form" method="post">
         <div class="row">
           <div class="col-12">
             <h1>Welcome Back!</h1>
-            <p>Please enter your details</p>
+            <p id="message">Please enter your details</p>
           </div>
         </div>
         <div class="row">
           <div class="col-12">
-            <label for="name"><b>Name</b></label>
+            <label for="email"><b>Email</b></label>
           </div>
           <div class="col">
-            <input type="text" placeholder="Enter full name" name="name" id="name" required />
+            <input type="email" placeholder="Enter your email" name="email" id="email" required />
           </div>
         </div>
 
         <div class="row">
           <div class="col-12">
-            <label for="psw"><b>Password</b> </label>
+            <label for="psw"><b>Password</b></label>
           </div>
           <div class="col-12">
             <input type="password" name="psw" id="psw" placeholder="Enter your password" required />
@@ -52,7 +52,7 @@
 
         <div class="row">
           <div class="col-12">
-            <button type="submit" class="registerbtn">Sign in</button>
+            <button type="submit" class="registerbtn">Login</button>
           </div>
         </div>
 
@@ -76,6 +76,7 @@
       </svg>
     </div>
   </div>
+  <script src="../scripts/userLogin.js" type="module"></script>
 </body>
 
 </html>
