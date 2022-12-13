@@ -2,6 +2,8 @@
 
 light-blue: #219EBC 
 
+light-blue(header): #cfeff7
+
 yellow: #FFB703 
 
 orange: #FB8500 
