@@ -1,4 +1,4 @@
-import { API_URL } from "./exports.js";
+import { API_URL, sessionSaveProducts } from "./exports.js";
 
 async function loadPopularProducts() {
   // api endpoint
@@ -11,6 +11,7 @@ async function loadPopularProducts() {
     mode: "cors",
   }).then(res => res.json()).then(value => value.products).catch(e => console.error(e));
 
+  if (!popularProducts) return;
   // the popular products on the landing page
   const products = document.querySelectorAll(".popular-products");
 
@@ -28,6 +29,8 @@ async function loadPopularProducts() {
     // product link
     link.href = `/pages/productDetails.html?id=${popularProducts[i].styleID}`
   }
+
+  sessionSaveProducts(popularProducts);
 }
 loadPopularProducts();
 
