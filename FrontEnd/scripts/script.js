@@ -26,7 +26,7 @@ async function loadPopularProducts() {
     // product price
     price.textContent = `$${popularProducts[i].retailPrice}`
     // product link
-    link.href = `/product?id=${popularProducts[i].styleID}`
+    link.href = `/pages/productDetails.html?id=${popularProducts[i].styleID}`
   }
 }
 loadPopularProducts();

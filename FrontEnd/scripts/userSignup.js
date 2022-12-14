@@ -48,7 +48,9 @@ async function SignUp(data) {
   }
   // api endpoint for logins
   const reqUrl = `${API_URL}/auth/sign_up`;
-  const req = await fetch(reqUrl, reqInit).then(res => res.json()).catch(e => console.error(e));
+  const req = await fetch(reqUrl, reqInit)
+    .then(res => res.json())
+    .catch(e => console.error(e));
   return req;
 }
 
