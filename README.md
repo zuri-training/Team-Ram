@@ -22,5 +22,5 @@ A platform that compares prices across multiple platforms
     
     
  ## Deployed Website
-
-   https://team-ram-price-compare.netlify.app/
+ 
+https://team-ram-price-compare.netlify.app/

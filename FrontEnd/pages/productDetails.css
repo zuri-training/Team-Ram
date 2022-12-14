@@ -440,11 +440,9 @@ body {
 
 footer {
   display: flex;
-  justify-content: space-around;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer-img .footer-SM-img {
@@ -461,7 +459,7 @@ footer {
   padding: 10px;
 }
 
-.footer-misc div {
+.footer-misc {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -475,11 +473,49 @@ footer {
   text-decoration: none;
 }
 
-.footer-copyright {
+.copyright {
   padding: 20px;
   color: #ffffff;
-  position: absolute;
-  bottom: 0%;
-  right: 0%;
-  transform: translateX(-50%);
+}
+
+/* break point */
+
+@media (max-width: 834px) {
+  .nav-Bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+  .search-items {
+    width: 50vw;
+    position: relative;
+  }
+  #search-bar {
+    width: 50vw;
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    transform: translateX(-50%);
+  }
+  .second-main {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .second-main-card {
+    min-width: 250px;
+  }
+  .comments-container {
+    min-width: 250px;
+  }
+  .logo-two {
+    min-width: 120px;
+    margin-left: -20px;
+  }
+  .logo-three {
+    display: none;
+  }
+  .others {
+    margin-top: 10px;
+  }
 }
