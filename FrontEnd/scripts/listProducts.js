@@ -2,6 +2,7 @@ import { API_URL, sessionSaveProducts } from "./exports.js";
 
 async function shoeSearch() {
   const query = location.search.substring(1);
+  // query string to be processed by backend
   const reqQuery = encodeURI(query);
   const reqUrl = `${API_URL}/products/search?${reqQuery}`;
 
@@ -52,7 +53,7 @@ window.onload = async () => {
     // finally show card
     card.style.display = "block"
   }
-
+  // save the products displayed
   sessionSaveProducts(products);
 }
 
