@@ -9,7 +9,13 @@ async function loadPopularProducts() {
     },
     // avoid cors errors
     mode: "cors",
-  }).then(res => res.json()).then(value => value.products).catch(e => console.error(e));
+  }).then(res => res.json()).then(value => value.products).catch(e => {
+    console.error(e);
+    // retry after 5 secs if an error occured
+    setTimeout(() => {
+      loadPopularProducts();
+    }, 5000);
+  });
 
   if (!popularProducts) return;
   // the popular products on the landing page
