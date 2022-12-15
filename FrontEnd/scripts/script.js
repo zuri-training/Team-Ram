@@ -1,5 +1,7 @@
 import { API_URL, sessionSaveProducts } from "./exports.js";
 
+let retries = 0;
+
 async function loadPopularProducts() {
   // api endpoint
   const popularProducts = await fetch(API_URL + "/products/popular", {
@@ -12,9 +14,12 @@ async function loadPopularProducts() {
   }).then(res => res.json()).then(value => value.products).catch(e => {
     console.error(e);
     // retry after 5 secs if an error occured
-    setTimeout(() => {
-      loadPopularProducts();
-    }, 5000);
+    if (retries < 10) {
+      retries++;
+      setTimeout(() => {
+        loadPopularProducts();
+      }, 5000);
+    }
   });
 
   if (!popularProducts) return;
