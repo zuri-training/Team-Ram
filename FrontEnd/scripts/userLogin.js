@@ -1,4 +1,4 @@
-import { API_URL } from "./exports.js";
+import { API_URL, setCurrentUser } from "./exports.js";
 
 const loginForm = document.getElementById("login-form");
 
@@ -18,6 +18,7 @@ loginForm.onsubmit = (e) => {
         throw new Error(res.message);
       }
       alert(`Logged in as ${res.user.name}`)
+      setCurrentUser(res.user);
       location.pathname = "/";
     })
     // show error on failure

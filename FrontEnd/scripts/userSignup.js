@@ -1,4 +1,4 @@
-import { API_URL } from "./exports.js";
+import { API_URL, setCurrentUser } from "./exports.js";
 
 const signUpForm = document.getElementById("sign-up");
 const messageEl = document.getElementById("message");
@@ -22,6 +22,7 @@ signUpForm.onsubmit = (e) => {
     .then((res) => {
       if (!res.success) throw new Error(res.message);
       alert(`Signed Up as ${res.user.name}`)
+      setCurrentUser(res.user)
       location.pathname = "/";
     })
     // show error on failure
