@@ -1,4 +1,6 @@
-import { API_URL } from "./exports.js";
+import { API_URL, sessionSaveProducts } from "./exports.js";
+
+let retries = 0;
 
 async function loadPopularProducts() {
   // api endpoint
@@ -9,8 +11,18 @@ async function loadPopularProducts() {
     },
     // avoid cors errors
     mode: "cors",
-  }).then(res => res.json()).then(value => value.products).catch(e => console.error(e));
+  }).then(res => res.json()).then(value => value.products).catch(e => {
+    console.error(e);
+    // retry after 5 secs if an error occured
+    if (retries < 10) {
+      retries++;
+      setTimeout(() => {
+        loadPopularProducts();
+      }, 5000);
+    }
+  });
 
+  if (!popularProducts) return;
   // the popular products on the landing page
   const products = document.querySelectorAll(".popular-products");
 
@@ -28,6 +40,8 @@ async function loadPopularProducts() {
     // product link
     link.href = `/pages/productDetails.html?id=${popularProducts[i].styleID}`
   }
+
+  sessionSaveProducts(popularProducts);
 }
 loadPopularProducts();
 
@@ -43,3 +57,19 @@ landingPageSearchBtn.onclick = () => {
 
   location.href = `${location.pathname}pages/list.html?q=${reqQuery}`;
 };
+
+
+// incase the backend has spun down due to being on the free tier
+
+async function SpinUpBackend() {
+  await fetch(API_URL, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json"
+    },
+    // avoid cors errors
+    mode: "cors",
+  })
+}
+
+SpinUpBackend();

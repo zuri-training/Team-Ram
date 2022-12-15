@@ -40,10 +40,11 @@
 }
 
 .product-list > .row {
-  justify-content: center;
+  justify-content: left;
 }
 
 .product-card {
+  display: none;
   font-size: 26px;
   width: min(90%, 200px);
   justify-content: center;

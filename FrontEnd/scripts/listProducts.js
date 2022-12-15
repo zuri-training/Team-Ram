@@ -1,7 +1,8 @@
-import { API_URL } from "./exports.js";
+import { API_URL, sessionSaveProducts } from "./exports.js";
 
 async function shoeSearch() {
   const query = location.search.substring(1);
+  // query string to be processed by backend
   const reqQuery = encodeURI(query);
   const reqUrl = `${API_URL}/products/search?${reqQuery}`;
 
@@ -33,7 +34,7 @@ window.onload = async () => {
   for (let i in productCards) {
     const card = productCards[i];
     const product = products[i];
-
+    if (!product) continue;
     // destructure the parts of the card 
     // and give them their respective props
     const [image, body] = card.children;
@@ -47,8 +48,13 @@ window.onload = async () => {
     name.textContent = shoeName;
     const [price, link] = end.children;
     price.textContent = product.retailPrice ? `$${product.retailPrice}` : "";
-    link.href = `/pages/productDetails.html?id=${product.styleID}`
+    link.href = `/pages/productDetails.html?id=${product.styleID}`;
+
+    // finally show card
+    card.style.display = "block"
   }
+  // save the products displayed
+  sessionSaveProducts(products);
 }
 
 function trimName(name) {
@@ -57,3 +63,14 @@ function trimName(name) {
   name = name.slice(0, 20) + "...";
   return name;
 }
+
+const landingPageSearchBtn = document.getElementById("landing-page-search-btn");
+
+landingPageSearchBtn.onclick = () => {
+  const query = document.getElementById("landing-page-search").value;
+  if (!query) return;
+
+  const reqQuery = encodeURI(query);
+
+  location.href = `${location.origin}/pages/list.html?q=${reqQuery}`;
+};

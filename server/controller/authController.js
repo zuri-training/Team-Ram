@@ -17,7 +17,10 @@ exports.login = async (req, res) => {
         res.status(200).send({
           success: true,
           message: "user authorized",
-          user: doc,
+          user: {
+			_id: doc._id,
+			name: doc.name
+		  },
         })
       })
       .catch(e => {
@@ -63,7 +66,10 @@ exports.signUp = async (req, res) => {
       res.status(201).send({
         success: true,
         message: "created user",
-        user: doc
+        user: {
+		  _id: doc._id,
+		  name: doc.name
+		}
       })
     })
       .catch(e => {
