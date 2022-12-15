@@ -43,3 +43,7 @@ export function getCurrentUser() {
 export function setCurrentUser(user) {
   localStorage.setItem("user", JSON.stringify(user));
 }
+
+export function removeCurrentUser() {
+  localStorage.removeItem("user");
+}
