@@ -9,7 +9,7 @@ const commentSchema = mongoose.Schema(
   {
     user: {
       type: {
-        _id: { type: String, required: true, unique: true },
+        _id: { type: String, required: true },
         name: { type: String, required: true },
       },
       required: true,
