@@ -185,6 +185,7 @@ body {
 }
 
 .second-main-img-small img {
+  display: none;
   border: 1px solid black;
   margin-right: 20px;
   width: 90%;
@@ -281,6 +282,11 @@ body {
   color: #ffffff;
 }
 
+.second-main-card button a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card-footer {
   padding: 5px;
   font-size: 26px;
@@ -313,7 +319,7 @@ body {
   border-radius: 9px;
   padding: 10px;
   width: auto;
-  display: flex;
+  display: none;
   flex-flow: column;
   gap: 10px;
 }
@@ -337,7 +343,8 @@ body {
   margin-top: 5px;
 }
 
-.third-main-container button {
+.third-main-container button,
+.post-comment {
   cursor: pointer;
   color: #fb8500;
   outline: none;
@@ -348,7 +355,8 @@ body {
   border-radius: 8px;
 }
 
-.third-main-container button:hover {
+.third-main-container button:hover,
+.post-comment:hover {
   color: #ffffff;
   background-color: #fb8500;
 }
@@ -505,6 +513,7 @@ footer {
   .second-main-card {
     min-width: 250px;
   }
+
   .comments-container {
     min-width: 250px;
   }

@@ -34,6 +34,12 @@ function setProducts(products) {
   return products;
 }
 
+export function filterSavedProducts(brand) {
+  const products = getProducts();
+  const res = products.filter(({ brand }) => brand.includes(brand));
+  return res;
+}
+
 /* User Functions  */
 export function getCurrentUser() {
   const user = JSON.parse(localStorage.getItem("user"));
