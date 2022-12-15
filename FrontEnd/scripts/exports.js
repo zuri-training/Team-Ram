@@ -1,5 +1,7 @@
 export const API_URL = "https://price-compare-gyn2.onrender.com";
 
+/* Product Functions */
+
 export function sessionSaveProducts(productsArr) {
   const products = getProducts();
   // only session save if it hasn't been saved before
@@ -30,4 +32,14 @@ function getProducts() {
 function setProducts(products) {
   sessionStorage.setItem("products", JSON.stringify(products));
   return products;
+}
+
+/* User Functions  */
+export function getCurrentUser() {
+  const user = JSON.parse(localStorage.getItem("user"));
+  return user;
+}
+
+export function setCurrentUser(user) {
+  localStorage.setItem("user", JSON.stringify(user));
 }
