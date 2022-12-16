@@ -195,7 +195,7 @@ async function PostComment() {
 
   const req = await fetch(reqUrl, reqInit)
     .then(res => res.json())
-    .then(res => console.log(res))
+    /*  .then(res => console.log(res)) */
     .catch(e => console.error(e));
 }
 
