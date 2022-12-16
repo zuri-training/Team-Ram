@@ -1,12 +1,12 @@
 import { filterSavedProducts } from "./exports.js";
 
-export function OtherProducts(brand) {
-  const products = filterSavedProducts(brand);
+export function OtherProducts(brand, exludeId) {
+  const products = filterSavedProducts(brand, exludeId);
   const container = document.querySelector(".third-main-img");
 
   for (let i = 0; i < container.children.length; i++) {
     const card = container.children[i];
-    const product = products[i];
+    const product = products[i + Math.floor(Math.random() * 10)] ?? products[i];
 
     if (!product) continue;
 

@@ -122,9 +122,12 @@ body {
 }
 
 .second-main {
+  max-width: 1200px;
   padding: 25px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .second-main-img-big {
@@ -132,8 +135,8 @@ body {
 }
 
 .second-main img.shoe-img {
-  width: 40rem;
-  height: 30rem;
+  width: 100%;
+  height: auto;
 }
 
 .second-main-share-img {
@@ -195,7 +198,7 @@ body {
 .second-main-card {
   border: 2px solid black;
   border-radius: 30px;
-  width: 60%;
+  width: 90%;
   height: 75%;
   padding: 30px 15px;
   display: flex;

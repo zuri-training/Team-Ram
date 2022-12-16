@@ -34,9 +34,9 @@ function setProducts(products) {
   return products;
 }
 
-export function filterSavedProducts(brand) {
+export function filterSavedProducts(brand, exludeId) {
   const products = getProducts();
-  const res = products.filter(({ brand }) => brand.includes(brand));
+  const res = products.filter(({ styleID, brand }) => brand.includes(brand) && styleID !== exludeId);
   return res;
 }
 

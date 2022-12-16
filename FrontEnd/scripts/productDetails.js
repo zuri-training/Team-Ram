@@ -71,14 +71,18 @@ function RenderDetails() {
   const [, price] = document.querySelector(".price-tag").children;
   price.textContent = `$${details.retailPrice}`;
 
+  const compareLink = document.getElementById("price-compare-link");
+  const id = getUrlQuery();
+  compareLink.href = `/pages/compare.html?id=${id}`;
+
   const description = document.querySelector(".PD-PD");
   description.innerHTML += details.description;
 
   const [buyNowBtn] = document.querySelector(".buy-now").children;
   buyNowBtn.href = details.resellLinks.stockX ?? details.resellLinks.goat ?? '#';
 
-  // display shoes for you may also like
-  OtherProducts(details.brand)
+  // display shoes for "you may also like" section
+  OtherProducts(details.brand, id)
 }
 
 
