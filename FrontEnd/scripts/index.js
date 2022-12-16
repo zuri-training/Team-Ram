@@ -48,15 +48,16 @@ loadPopularProducts();
 
 
 // search button redirects to product list page
-const landingPageSearchBtn = document.getElementById("landing-page-search-btn");
+const landingPageSearchForm = document.getElementById("landing-page-search-form");
 
-landingPageSearchBtn.onclick = () => {
+landingPageSearchForm.onsubmit = (e) => {
+  e.preventDefault();
   const query = document.getElementById("landing-page-search").value;
   if (!query) return;
 
   const reqQuery = encodeURI(query);
 
-  location.href = `${location.pathname}pages/list.html?q=${reqQuery}`;
+  location.href = `/pages/list.html?q=${reqQuery}`;
 };
 
 // change nav bar if logged in 

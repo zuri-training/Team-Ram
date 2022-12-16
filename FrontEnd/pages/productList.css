@@ -19,7 +19,8 @@
 }
 
 .page-location {
-  font-size: 32px;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .filter-options ul {
@@ -37,6 +38,8 @@
   font-size: 16px;
   display: flex;
   justify-content: space-between;
+  gap: 0.5rem;
+  min-width: fit-content;
 }
 
 .product-list > .row {

@@ -201,3 +201,19 @@ async function PostComment() {
 
 const postButton = document.querySelector(".post-comment");
 postButton.onclick = () => PostComment();
+
+const searchForm = document.getElementById("shoe-search");
+
+searchForm.onsubmit = (e) => {
+  e.preventDefault();
+  ShoeSearch()
+}
+
+function ShoeSearch() {
+  const query = document.getElementById("search-bar").value;
+  if (!query) return;
+
+  const q = encodeURI(query);
+  location.href = `/pages/list.html?q=${q}`;
+
+}
