@@ -94,6 +94,7 @@ exports.addProductComment = async (req, res) => {
   try {
     const { id } = await req.query;
     const { comment } = await req.body;
+	if (!comment) throw new Error("comment cannot be falsy");
     Products.findOne({ sneaks_id: id })
       .then(product => {
         if (!product) throw new Error("error getting product");

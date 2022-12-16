@@ -1,4 +1,4 @@
-import { API_URL, sessionSaveProducts } from "./exports.js";
+import { API_URL, getCurrentUser, removeCurrentUser, sessionSaveProducts } from "./exports.js";
 
 let retries = 0;
 
@@ -43,6 +43,7 @@ async function loadPopularProducts() {
 
   sessionSaveProducts(popularProducts);
 }
+
 loadPopularProducts();
 
 
@@ -57,6 +58,39 @@ landingPageSearchBtn.onclick = () => {
 
   location.href = `${location.pathname}pages/list.html?q=${reqQuery}`;
 };
+
+// change nav bar if logged in 
+function ChangeNavBar() {
+  const btnContainer = document.getElementById("nav-btns");
+
+  const logoutBtn = document.createElement("div");
+  logoutBtn.classList.add("signUp");
+  logoutBtn.textContent = "Logout";
+  logoutBtn.onclick = () => {
+    removeCurrentUser();
+    location.reload();
+  }
+
+  const navLink = document.createElement("a");
+  navLink.href = "#";
+  navLink.classList.add("nav-link", "nav-link-sign-up");
+  navLink.appendChild(logoutBtn);
+
+  const navItem = document.createElement("li");
+  navItem.classList.add("nav-item");
+  navItem.appendChild(navLink);
+
+  btnContainer.replaceChildren(navItem);
+}
+
+function NavBar() {
+  const user = getCurrentUser();
+  if (user && user._id) {
+    ChangeNavBar();
+  }
+}
+
+NavBar();
 
 
 // incase the backend has spun down due to being on the free tier

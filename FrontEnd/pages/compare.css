@@ -202,7 +202,7 @@ a {
     top: -8px;
     transform: translateX(-50%);
   }
-   .logo-two {
+  .logo-two {
     min-width: 120px;
     margin-left: -20px;
   }
@@ -212,4 +212,8 @@ a {
   .others {
     margin-top: 10px;
   }
+}
+
+.col.item {
+  display: none;
 }

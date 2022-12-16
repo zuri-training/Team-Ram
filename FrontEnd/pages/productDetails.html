@@ -48,7 +48,7 @@
           <!--  ------- BIG CONTAINER (IMAGE)  ------- -->
           <div class="second-main-img-big">
             <div class="second-main-shoe-img">
-              <img src="../assets/nike-black.PNG" alt="" class="shoe-img" style="width:100%;">
+              <img alt="" class="shoe-img" id="shoe-img-main">
             </div>
             <div class="second-main-share-img">
               <img src="../assets/icons8-share.svg" alt="" class="share-img">
@@ -70,7 +70,7 @@
         </div>
 
         <div class="second-main-card">
-          <h1> Nike Air Max - 90 LTR for Men</h1>
+          <h1 id="main-shoe-name"></h1>
 
           <div class="card-miscellaneous">
             <div class="ratings">
@@ -90,68 +90,47 @@
             </div>
 
             <div class="size">
-              <p class="size">Size:</p>
-              <p> Select size to see price</p>
-              <img src="../assets/icons8-drop-down-48.png" alt="" class="arrow-down">
+              <p>Size:</p>
+              <select>
+                <option>40</option>
+                <option>41</option>
+                <option>42</option>
+              </select>
             </div>
 
             <div class="vendor">
-              <p>Vendor</p>
-              <img src="../assets/icons8-ebay-48.png" alt="" class="ebay-img">
+              <p>Vendors:</p>
+
             </div>
 
             <div class="color">
               <p>Color:</p>
-              <p>Black</p>
             </div>
 
             <div class="price-tag">
-              <p>$60</p>
-              <p>Free Shipping</p>
+              <p>Retail Price: </p>
+              <p></p>
             </div>
 
             <div class="compare">
-              <p><a href="">Compare prices</a></p>
+              <p><a href="#" id="price-compare-link">Compare prices</a></p>
             </div>
 
             <div class="PD">
               <div class="PD-PD">
-                <h3>Product Details</h3>
-              </div>
-
-              <div class="PD-misc">
-                <div class="PD-FB">
-                  <h3>Fabric Type</h3>
-                  <span>
-                    <p>100% Leather</p>
-                  </span>
-                </div>
-                <div class="PD-O">
-                  <h3>Origin</h3>
-                  <span>
-                    <p>Imported</p>
-                  </span>
-                </div>
-                <div class="PD-SM">
-                  <h3>Sole Material</h3>
-                  <span>Rubber</span>
-                </div>
-                <div class="PD-CT">
-                  <h3>Closure Type</h3>
-                  <span>Lace-Up</span>
-                </div>
+                <h4>Product Details:</h3>
               </div>
             </div>
 
-            <div class="card-footer">
+            <!-- <div class="card-footer">
               <h6><a href="">See More Details</a></h6>
               <img src="../assets/icons8-drop-down-48 (2).png" alt="" class="arrow-down">
-            </div>
+            </div> -->
 
           </div>
 
-          <button class="buy-now">Buy Now</button>
-          <button class="add-to-cart">Add to Cart</button>
+          <button class="buy-now"><a href="#">Buy Now</a></button>
+          <!-- <button class="add-to-cart">Add to Cart</button> -->
 
         </div>
       </div>
@@ -163,7 +142,7 @@
           <div class="third-main-img">
             <div class="third-main-img-one third-all-img">
               <img src="../assets/nike-black.PNG" alt="" class="third-shoe-img">
-              <p>Air Max Next Nature For Older Kids</p>
+              <p></p>
               <div class="ratings">
                 <p class="rate">4.5</p>
 
@@ -180,14 +159,14 @@
                 </span>
               </div>
               <div class="priceNbuy">
-                <p class="price">$55.00</p>
-                <button class="buy-now buy-now-small">Buy Now</button>
+                <p class="price"></p>
+                <button class="buy-now buy-now-small">View Details</button>
               </div>
             </div>
 
             <div class="third-main-img-two third-all-img">
               <img src="../assets/nike-black.PNG" alt="" class="third-shoe-img">
-              <p>Air Max Next Nature For Older Kids</p>
+              <p></p>
               <div class="ratings">
                 <p class="rate">4.5</p>
 
@@ -204,14 +183,14 @@
                 </span>
               </div>
               <div class="priceNbuy">
-                <p class="price">$55.00</p>
-                <button class="buy-now buy-now-small">Buy Now</button>
+                <p class="price"></p>
+                <button class="buy-now buy-now-small">View Details</button>
               </div>
             </div>
 
             <div class="third-main-img-three third-all-img">
               <img src="../assets/nike-black.PNG" alt="" class="third-shoe-img">
-              <p>Air Max Next 90 For younger Kids</p>
+              <p></p>
               <div class="ratings">
                 <p class="rate">4.5</p>
 
@@ -228,14 +207,14 @@
                 </span>
               </div>
               <div class="priceNbuy">
-                <p class="price">$60.00</p>
-                <button class="buy-now buy-now-small">Buy Now</button>
+                <p class="price"></p>
+                <button class="buy-now buy-now-small">View Details</button>
               </div>
             </div>
 
             <div class="third-main-img-four third-all-img">
               <img src="../assets/nike-black.PNG" alt="" class="third-shoe-img">
-              <p>Air Max Next Nature For Older Kids</p>
+              <p></p>
               <div class="ratings">
                 <p class="rate">4.5</p>
 
@@ -252,8 +231,8 @@
                 </span>
               </div>
               <div class="priceNbuy">
-                <p class="price">$60.00</p>
-                <button class="buy-now buy-now-small">Buy Now</button>
+                <p class="price"></p>
+                <button class="buy-now buy-now-small">View Details</button>
               </div>
             </div>
           </div>
@@ -261,60 +240,23 @@
 
       </div>
       <!-- ------------------------ FOURTH SUB MAIN BODY --------------------------- -->
-      <div class="fourth-main">
+      <!-- <div class="fourth-main">
         <h2>Looking For Specific Info?</h2>
         <p>Search for Product Info, Comments, FAQ and reviews.</p>
         <input type="text" placeholder="What are you looking for...">
-      </div>
+      </div> -->
 
       <!-- ------------------------ FIFTH SUB MAIN BODY --------------------------- -->
       <div class="fifth-main">
         <h1>Comments</h1>
         <div class="comments-container">
-          <div class="PC PC-one">
-            <div class="PC-comment">
-              <h6>Beejay</h6>
-              <h6>September 10, 2022 at 5:30pm</h6>
-            </div>
-            <div class="PC-para">
-              <p>I remember my very first time I used this website
-                It was referred to by a friend and since then it
-                has been my go-to website for any price compare need.
-              </p>
-              <p class="PC-a"><a href="#">Read more</a></p>
-            </div>
-          </div>
-          <div class="PC PC-two">
-            <div class="PC-comment">
-              <h6>Praise</h6>
-              <h6>September 13, 2022 at 8:30pm</h6>
-            </div>
-            <div class="PC-para">
-              <p>Price Compare has never disappointed me before.
-                They have legit vendors, and the prices here are
-                so affordable and I get why many person trust them.
-              </p>
-              <p class="PC-a"><a href="#">Read more</a></p>
-            </div>
-          </div>
-          <div class="PC PC-three">
-            <div class="PC-comment">
-              <h6>Israel</h6>
-              <h6>September 13, 2022 at 1:30pm</h6>
-            </div>
-            <div class="PC-para">
-              <p>I stumbled on this website by accident and ever
-                since then, it has been my favourite website.
-                I wish they had an app.
-              </p>
-              <p class="PC-a"><a href="#">Read more</a></p>
-            </div>
-          </div>
 
-          <h5>See all comments and reviews</h5>
+
+          <!-- <h5>See all comments and reviews</h5> -->
         </div>
 
-        <input class="input" placeholder="Write a comment...">
+        <input class="input comment-input" placeholder="Write a comment...">
+        <button class="post-comment">Send</button>
       </div>
 
 
@@ -348,6 +290,7 @@
 
   <!-- ---------------------------------------- SCRIPTS --------------------------- -->
   <script src="../scripts/productDetails.js" type="module"></script>
+  <script src="../scripts/alsoLike.js" type="module"></script>
 </body>
 
 </html>
