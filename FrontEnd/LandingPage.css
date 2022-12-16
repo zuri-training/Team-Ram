@@ -180,6 +180,7 @@ header {
   padding: 1.5em;
   background: var(--Neutral-blue);
   color: var(--Neutral-white);
+  text-align: center;
 }
 
 .footer-link {
